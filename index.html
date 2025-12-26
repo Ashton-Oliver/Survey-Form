@@ -1,55 +1,54 @@
 <link rel="stylesheet" href="styles.css">
-<h1 id="title"> How can the Premier League improve the quality of refereeing?</h1>
-<p id="description"> Thank you for taking the time to help the Premier League improve</p>
-<form id="survey-form">
-  <div class="input-element">
-    <label id="name-label"> Name </label>
-    <input placeholder="Name" id="name" type="text"
-    required />
+<div class="form-container">
+  <h1 id="title">How can the Premier League improve the quality of refereeing?</h1>
+  <p id="description">Thank you for taking the time to help the Premier League improve</p>
+
+  <form id="survey-form">
+    <div class="form-group">
+      <label for="name" id="name-label">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required />
     </div>
 
-    <div class="input-element">
-      <label id="email-label">
-        Email
-        </label>
-        <input placeholder="Email" id="email" type="email"
-    required />
+    <div class="form-group">
+      <label for="email" id="email-label">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required />
     </div>
 
-<div class="input-element">
-    <label id="number-label"> Age </label>
-    <input placeholder="Age" id="number" type="number"
-    min="5" max="100"
-    required />
+    <div class="form-group">
+      <label for="number" id="number-label">Age</label>
+      <input type="number" id="number" name="age" placeholder="Your age" min="5" max="100" required />
     </div>
 
-    <div class="input-element">
-    <label id="select-label"> Who's your favorite team? </label>
-    <div><select id="dropdown">
-      <option> Manchester United </option>
-      <option> Liverpool</option>
-      <option> Arsenal </option>
-       </select></div>
+    <div class="form-group">
+      <label for="dropdown">Who's your favorite team?</label>
+      <select id="dropdown" name="team">
+        <option value="manu">Manchester United</option>
+        <option value="liverpool">Liverpool</option>
+        <option value="arsenal">Arsenal</option>
+      </select>
+    </div>
 
-       <div>
-         <label>
-           Have you been to a game before?
-           </label></div>
-           <div><label><input type="radio" name="game" value="yes" /> Yes</label></div>
-           <div><label><input type="radio" name="game" value="no" /> No </label></div>
+    <fieldset class="form-group">
+      <legend>Have you been to a game before?</legend>
+      <label><input type="radio" name="game" value="yes" /> Yes</label>
+      <label><input type="radio" name="game" value="no" /> No</label>
+    </fieldset>
 
-           <div>
-         <label>
-           Which suggestions are good ideas to implement in the Premier League?
-           </label>
-           <div><label><input type="checkbox" name="ideas" value="keep-var"/> Keep VAR</label></div>
-           <div><label><input type="checkbox" name="ideas" value="no-var" /> Get Rid of VAR </label></div>
-           <div><label><input type="checkbox" name="ideas" value="ref-analysis" /> Referees to give post-match analysis</label></div>
-           <div><label><input type="checkbox" name="ideas" value="ref-voice" /> Referees to be mic'd up during games </label></div>
-           
-           <div class="input-element">
-             <label> Additional Comments</label>
-             <div><textarea type="text"></textarea></div> </div>
-             <button type="submit" id="submit"> Submit</button>
-         
-</form>
+    <fieldset class="form-group">
+      <legend>Which suggestions are good ideas to implement in the Premier League?</legend>
+      <label><input type="checkbox" name="ideas" value="keep-var" /> Keep VAR</label>
+      <label><input type="checkbox" name="ideas" value="no-var" /> Get Rid of VAR</label>
+      <label><input type="checkbox" name="ideas" value="ref-analysis" /> Referees to give post-match analysis</label>
+      <label><input type="checkbox" name="ideas" value="ref-voice" /> Referees to be mic'd up during games</label>
+    </fieldset>
+
+    <div class="form-group">
+      <label for="comments">Additional Comments</label>
+      <textarea id="comments" name="comments" placeholder="Share your thoughts..."></textarea>
+    </div>
+
+    <button type="submit" id="submit">Submit</button>
+  </form>
+</div>
+
+
